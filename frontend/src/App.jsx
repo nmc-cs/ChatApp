@@ -8,10 +8,11 @@ import ChatsPage from "./ChatsPage";
 
 function App() {
   const [user, setUser] = useState(undefined);
-  // if no user redner authpage
+  // if no user render authpage
   if (!user) {
     return <AuthPage onAuth={(user) => setUser(user)} />;
-  } else { // create chatspage
+  } else {
+    // create chatspage
     return <ChatsPage user={user} />;
   }
 }
